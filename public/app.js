@@ -669,6 +669,12 @@ document.addEventListener('keydown', (e) => {
   else if (e.key === '/' && !['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) { e.preventDefault(); show('chat'); input.focus(); }
 });
 
+// Deep links: #faqs, #stats, #admin, #about open that screen; ?theme=dark|light previews a theme without saving it.
+const VIEWS = ['chat', 'faqs', 'stats', 'admin', 'about'];
+const themeParam = new URLSearchParams(location.search).get('theme');
+if (themeParam === 'dark' || themeParam === 'light') { applyTheme(themeParam === 'dark'); $('#darkToggle').checked = themeParam === 'dark'; }
+window.addEventListener('hashchange', () => { const v = location.hash.slice(1); if (VIEWS.includes(v)) show(v); });
+
 (async function boot() {
   state.view = 'chat';
   renderChips(); renderTopics(); updateComposer();
@@ -676,5 +682,6 @@ document.addEventListener('keydown', (e) => {
   setAdmin(Boolean(state.adminToken));
   const r = await api('/api/messages/');
   if (r.ok) { state.messages = r.data.messages; renderMessages(); }
-  input.focus();
+  const startView = location.hash.slice(1);
+  if (VIEWS.includes(startView) && startView !== 'chat') show(startView); else input.focus();
 })();

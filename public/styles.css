@@ -401,7 +401,7 @@ input:focus, select:focus, .card textarea:focus { outline: 0; border-color: var(
 }
 .topic:active { transform: scale(.97); }
 .topic strong { display: block; font-size: 14.5px; letter-spacing: -.015em; }
-.topic span { display: block; font-size: 12.5px; color: var(--text-3); margin-top: 2px; line-height: 1.35; }
+.topic > div > span { display: block; font-size: 12.5px; color: var(--text-3); margin-top: 2px; line-height: 1.35; }
 .topic .go { margin-top: auto; align-self: flex-end; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); transition: background .3s var(--ease), color .3s, transform .4s var(--ease); }
 .topic .go svg { width: 15px; height: 15px; }
 .topic:hover .go { background: var(--accent); color: var(--accent-ink); transform: rotate(-45deg); }
@@ -561,7 +561,7 @@ kbd { font: 600 11px/1 var(--font); padding: 4px 6px; border-radius: 6px; backgr
 #paletteList { list-style: none; margin: 0; padding: 8px; overflow-y: auto; }
 .palette-group { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--text-3); padding: 10px 10px 4px; }
 .palette-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 12px; cursor: pointer; color: var(--text); font-size: 14.5px; }
-.palette-item span { flex: 1; min-width: 0; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.palette-item > span:not(.mini-ico) { flex: 1; min-width: 0; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .palette-item .mini-ico svg { width: 17px; height: 17px; stroke-width: 1.8; }
 .palette-item.active { background: var(--accent); color: var(--accent-ink); }
 .palette-item.active kbd { background: rgba(255,255,255,.18); color: inherit; border-color: transparent; }

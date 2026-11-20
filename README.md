@@ -110,6 +110,8 @@ Stats screen · helpful / not helpful / wrong-answer buttons · suggested-questi
 | 9 | **Command palette (Ctrl+K).** Jump to screens, ask any FAQ, run actions, toggle settings. `/` focuses the message box. | Top bar |
 | 10 | **Text size** (small / default / large), remembered between visits. | Sidebar → Settings |
 
+**Deep links:** `http://localhost:3000/#faqs`, `#stats`, `#admin` and `#about` open that screen directly. Adding `?theme=dark` or `?theme=light` previews a theme without changing the saved setting, which is handy for the demo.
+
 ## Testing the failure case
 Set `GROQ_API_KEY=INVALID-KEY-123` in `.env`, restart with `npm start`, and ask anything. The app shows "AI service unavailable. Please try again."
 

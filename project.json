@@ -1,0 +1,11 @@
+{
+  "appName": "AskSE",
+  "teamName": "Abdul Hannan",
+  "entryId": "70186845",
+  "members": ["Abdul Hannan"],
+  "repository": "https://github.com/abdulhannan00381-cmd/vibejam--70186845-",
+  "llmProvider": "Groq",
+  "aiTools": ["Claude Code (Claude Opus 5.5)"],
+  "university": "The University of Lahore · Department of Software Engineering",
+  "event": "CodeQuest 2026 · Vibe Jam: AI Sprint"
+}

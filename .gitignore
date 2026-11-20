@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+node_modules/
+data/
+*.db
+*.db-journal
+dist/
+build/
+.venv/
+venv/
+__pycache__/
+*.log
+.DS_Store
+*.zip

@@ -1,0 +1,16 @@
+﻿{
+  "name": "askse-help-desk",
+  "version": "1.0.0",
+  "description": "AskSE - FAQ-grounded departmental help desk chatbot",
+  "type": "module",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "test": "node --test tests/"
+  },
+  "engines": { "node": ">=22.5" },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.11.0"
+  }
+}
